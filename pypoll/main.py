@@ -1,22 +1,14 @@
 import os
 import csv
 
-# Write a function that returns the arithmetic average for a list of numbers
-def average(numbers):
-    length = len(numbers)
-    total = 0.0
-    for number in numbers:
-        total += number
-    return total / length
-​
-# create the csv variable for file
+​# create the csv variable for file
 bank_csv = os.path.join("..", "Resources", "election_data.csv")
 ​
 with open(bank_csv) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
 
      # Read the header row first (skip this part if there is no header)
-	    csv_header = next(csv_file)
+	    csv_header = next(csvfile)
         print(f"Header: {csv_header}")
 
 # Test your function with the following:
@@ -32,6 +24,16 @@ with open(bank_csv) as csvfile:
 #   "Avg precip: {:0.3f} in/day, max precip: {:0.3f} in/day"
 #   .format(avg_precip, max_precip)
 #)
+
+# Define the function and have it accept the 'wrestler_data' as its sole parameter
+def print_percentages(wrestler_data):
+
+# For readability, it can help to assign your values to variables with descriptive names
+    name = str(candidate_data[0])
+    wins = int(wrestler_data[1])
+    losses = int(wrestler_data[2])
+    draws = int(wrestler_data[3])
+
 ​
     # Read through each row of data after the header
     for row in csv_reader:
