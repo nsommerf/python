@@ -9,10 +9,7 @@ pldata = []
 # Write a function that returns the arithmetic average for a list of numbers
 def average(numbers):
     length = len(numbers)
-    total = 0.0
-    for number in numbers:
-        total += number
-    return total / length
+    return sum(numbers) / length
 
 # create the csv variable for file
 bank_csv = os.path.join("Resources", "budget_data.csv")
